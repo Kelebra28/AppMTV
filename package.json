@@ -2,9 +2,13 @@
   "name": "webmontev",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "server": "nodemon ./server/server.js",
+    "migrate_test": "NODE_ENV=test sequelize db:migrate",
+    "test": "NODE_ENV=test jest --forceExit",
+    "start": "node ./server/server.js",
+    "migrate": "sequelize db:migrtate"
   },
   "repository": {
     "type": "git",
@@ -12,6 +16,25 @@
   },
   "author": "Ricardo",
   "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^3.0.1",
+    "body-parser": "^1.18.3",
+    "celebrate": "^9.0.0",
+    "cors": "^2.8.4",
+    "express": "^4.16.4",
+    "jest": "^23.6.0",
+    "jsonwebtoken": "^8.3.0",
+    "morgan": "^1.9.1",
+    "pg": "^7.10.0",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^4.43.2",
+    "sequelize-cli": "^5.2.0",
+    "superagent": "^4.0.0-beta.5",
+    "supertest": "^3.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.11"
+  },
   "bugs": {
     "url": "https://github.com/Kelebra28/AppWebMTV/issues"
   },
