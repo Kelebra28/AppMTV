@@ -16,7 +16,7 @@ app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(cors());
-app.use('/api/',routes);
+app.use('/api/mtv',routes);
 app.use(errors());
 
 
