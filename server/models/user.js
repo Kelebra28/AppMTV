@@ -9,11 +9,18 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.UUID,
       defaultValue:DataTypes.UUIDV4 
     },
-    name: {type:DataTypes.STRING,
-           allowNull:false},
+    name: {
+      type:DataTypes.STRING,
+           allowNull:false
+          },
     lastname: {
         type:DataTypes.STRING,
-        allowNull:false},
+        allowNull:false
+      },
+      roll:{
+        type:DataTypes.STRING,
+        allowNull:false
+      },
     email: {
       type:DataTypes.STRING,
       allowNull:false,

@@ -9,9 +9,9 @@ module.exports = (sequelize, DataTypes) => {
     },
     total_price: DataTypes.DECIMAL(10,2),
   }, {});
-    Compras.associate = function() {
-    Compras.belongsTo(compras.Users,{foreignKey:"userId"})
-    Compras.belongsTo(compras.Products,{foreignKey:"productsId"})
+    Compras.associate = function(models) {
+    Compras.belongsTo(models.Users,{foreignKey:"userId"})
+    Compras.belongsTo(models.Products,{foreignKey:"productsId"})
   };
   return Compras;
 };

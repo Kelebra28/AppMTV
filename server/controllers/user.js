@@ -25,7 +25,6 @@ const logIn =  async(req,res) => {
         }
 
     }).catch((err) => console.log(err))
-
 }
 
 
@@ -53,6 +52,4 @@ module.exports = {
     signUp,
     logIn,
     me
-
-
 }

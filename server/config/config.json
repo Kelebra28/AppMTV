@@ -5,7 +5,6 @@
       "database": "yhgjxnaq",
       "host": "isilo.db.elephantsql.com",
       "dialect": "postgres"
-    }
-    
+    }    
   }
   

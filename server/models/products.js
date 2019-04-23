@@ -12,9 +12,10 @@ module.exports = (sequelize, DataTypes) => {
     price: DataTypes.DECIMAL(10,2),
     description: DataTypes.TEXT,
   }, {});
+
     Products.associate = function(models) {
     Products.belongsTo(models.Users,{foreignKey:"userId",as:"user"})
-    Products.hasMany(models.Bookings,{foreignKey:"houseId"})
+    Products.hasMany(models.Compras,{foreignKey:"productsId"})
   };
   return Products;
 };

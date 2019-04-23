@@ -6,6 +6,7 @@ const calculatePriceValidation =  celebrate({
         // date_init:Joi.date().required(),
         // date_due:Joi.date().required(),
         // houseId:Joi.string().required()
+        productId:Joi.string().required()
     }
 })
 
