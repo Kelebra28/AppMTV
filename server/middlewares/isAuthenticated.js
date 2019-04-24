@@ -18,7 +18,4 @@ const verifyToken = require("../resolvers/verifyToken")
          res.status(400).json({message})
      
      }
-
-
-
- }
+}

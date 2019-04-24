@@ -21,7 +21,7 @@ app.use(errors());
 
 
 app.get('/', (req,res) => {
-    res.send("Everthing Works! :)");
+    res.send("Todo funcionando cool uwu");
 });
 
 

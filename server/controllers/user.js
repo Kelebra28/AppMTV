@@ -5,23 +5,23 @@ const createToken = require('../resolvers/createToken');
 const signUp = async(req,res) => {
     let user = await Users.create(req.body).catch((error)=> res.status(400).json({error}))
 
-    if(!user) return res.status(400).json({message:"Couldn't create user"})
+    if(!user) return res.status(400).json({message:"No se puede crear el usuario"})
 
-    return res.status(201).json({message:"User created",id:user.id})
+    return res.status(201).json({message:"Usuario creado",id:user.id})
 }
 
 
 const logIn =  async(req,res) => {
 
     let user =  await Users.find({where:{email:req.body.email}})
-    if(!user) return res.status(404).json({"message":"User does not exist"})
+    if(!user) return res.status(404).json({"message":"El usuario no exite"})
 
     user.comparePassword(req.body.password).then(async(result) => {
         if(result){
             let token  = await createToken(user)
-            return res.status(200).json({"message":"User logged successfully",token})
+            return res.status(200).json({"message":"Acceso exitoso",token})
         }else{
-            return res.status(400).json({"message":"Password is incorrect"})
+            return res.status(400).json({"message":"Contraseña incorrecta"})
         }
 
     }).catch((err) => console.log(err))

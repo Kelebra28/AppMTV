@@ -6,7 +6,7 @@ const Productscreate = async(req,res) => {
     try{
         req.body.userId = req.user.id
         const product = await Products.create(req.body)
-        if(!product) res.status(400).json({"message":"Error to create product"})
+        if(!product) res.status(400).json({"message":"Error al crear producto"})
         
     }catch(e){
         console.log(e.message)
